@@ -1,15 +1,13 @@
-// app/page.tsx
-import ExperimentCard from "./components/ExperimentCard";
-import ParticleMotionExperiment from "./components/experiments/ParticleMotionExperiment";
-import RutherfordExperiment from "./components/experiments/RutherfordExperiment";
-import GasLawsExperiment from "./components/experiments/GasLawsExperiment";
-import SortingExperiment from "./components/experiments/SortingExperiment";
+// pages/index.tsx
+import ExperimentCard from "@/app/components/ExperimentCard";
+import ParticleMotionExperiment from "@/app/components/experiments/ParticleMotionExperiment";
+import RutherfordExperiment from "@/app/components/experiments/RutherfordExperiment";
+import GasLawsExperiment from "@/app/components/experiments/GasLawsExperiment";
 
-const HomePage = () => {
+const Index = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-8">
-        {/* Header Section */}
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
             Interactive Chemistry Experiments
@@ -19,7 +17,6 @@ const HomePage = () => {
           </p>
         </div>
 
-        {/* Experiments Grid */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
           <ExperimentCard
             title="Rutherford's Gold Foil"
@@ -44,18 +41,10 @@ const HomePage = () => {
           >
             <GasLawsExperiment />
           </ExperimentCard>
-
-          <ExperimentCard
-            title="Sorting Algorithms"
-            description="Understand different sorting techniques through interactive visualization"
-            subject="computer-science"
-          >
-            <SortingExperiment />
-          </ExperimentCard>
         </div>
       </div>
     </div>
   );
 };
 
-export default HomePage;
+export default Index;
